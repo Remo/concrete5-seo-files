@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<concrete5-cif version="1.0">
+    <singlepages>
+        <page name="Files" path="/dashboard/system/seo/files" filename="/dashboard/system/seo/files.php" pagetype=""
+              description="" package="seo_files"></page>
+    </singlepages>
+</concrete5-cif>
