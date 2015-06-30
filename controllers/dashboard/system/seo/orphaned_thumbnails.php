@@ -6,10 +6,15 @@ class DashboardSystemSeoOrphanedThumbnailsController extends Controller
     public function view() {
         $db = Loader::db();
 
-        $directory = new RecursiveDirectoryIterator(DIR_FILES_CACHE);
+        $directory = new RecursiveDirectoryIterator(DIR_FILES_CACHE, RecursiveDirectoryIterator::FOLLOW_SYMLINKS);
+
+
+
         $flattened = new RecursiveIteratorIterator($directory);
 
-        $files = new RegexIterator($flattened, '/^.+_f(\d)\.(jpeg|jpg|gif|png)$/i', RegexIterator::GET_MATCH);
+
+        $files = new RegexIterator($flattened, '/^.+_f(\d+)\.(jpeg|jpg|gif|png)$/i', RegexIterator::GET_MATCH);
+
         $thumbnails = [];
 
         foreach($files as $file) {
