@@ -3,5 +3,7 @@
     <singlepages>
         <page name="Files" path="/dashboard/system/seo/files" filename="/dashboard/system/seo/files.php" pagetype=""
               description="" package="seo_files"></page>
+        <page name="Orphaned Thumbnails" path="/dashboard/system/seo/orphaned_thumbnails" filename="/dashboard/system/seo/orphaned_thumbnails.php" pagetype=""
+              description="" package="seo_files"></page>
     </singlepages>
 </concrete5-cif>
